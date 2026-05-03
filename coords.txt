@@ -1,0 +1,10 @@
+Coordenadas: x, y, z
+
+Base initial:
+49, 73, 58
+
+portal nether
+12.82.17
+
+railway intersection:
+https://www.youtube.com/watch?v=b3A9oAXJ5g4

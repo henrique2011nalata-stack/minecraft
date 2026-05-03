@@ -4,7 +4,7 @@ SESSION_NAME="minecraft"
 JAR_PATH="server.jar"
 LOG_FILE="server.log"
 
-JAVA_ARGS="-Xms1200M -Xmx1200M -XX:+UseG1GC -XX:ParallelGCThreads=1"
+JAVA_ARGS="-Xms1200M -Xmx2200M -XX:+UseG1GC -XX:ParallelGCThreads=1"
 
 if screen -list | grep -q "\.$SESSION_NAME"; then
     echo "Server is already running! Use 'screen -r $SESSION_NAME' to see it."
