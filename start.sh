@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SESSION_NAME="minecraft"
-JAR_PATH="server.jar"
+JAR_PATH="poseidon.jar"
 LOG_FILE="server.log"
 
 JAVA_ARGS="-Xms1200M -Xmx2200M -XX:+UseG1GC -XX:ParallelGCThreads=1"

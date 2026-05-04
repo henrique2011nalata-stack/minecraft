@@ -1,0 +1,182 @@
+settings:
+    release2beta:
+        proxy-ip: 127.0.0.1
+        enable-ip-pass-through: false
+    update-checker:
+        notify-staff:
+            enabled: true
+            info: This setting notifies operators and players with the permission poseidon.update when a new version of Poseidon is available on join.
+        interval:
+            ticks: 72000
+            info: Controls how often the update checker will query the latest Poseidon version
+        notify-if-up-to-date:
+            enabled: false
+            info: This setting controls if the update checker will print a message in console if the server is up to date.
+        enabled: true
+        info: This setting allows you to disable the update checker. This is useful if you have a custom build of Poseidon or don't want to be notified of updates.
+    save-playerdata-by-uuid: true
+    fix-drowning-push-down:
+        enabled: true
+        info: This setting fixes taking drowning damage pushing you down.
+    player-knockback-fix:
+        enabled: true
+        info: This setting fixes reduced knockback for certain players on the server.
+    enable-tpc-nodelay: false
+    packet-events:
+        enabled: false
+        info: This setting causes the server to fire a Bukkit event for each packet received and sent to a player once they have finished the initial login process. This only needs to be enabled if you have a plugin that uses this specific feature.
+    watchdog:
+        enable: true
+        debug-timeout:
+            value: 30
+            enabled: false
+            info: debug-timeout can be used to print a stack trace at a lower interval then the main timeout allowing admins to locate blocking tasks that cause hangs over a certain duration. Only enable this if you have experienced temporary hangs/server freezes.
+        timeout:
+            value: 120
+            info: The number of seconds to kill the server process after no ticks occurring.
+        info: Watchdog is a automatic hang detection system which can print stacktraces and kill the server automatically after a predefined interval.
+    delete-duplicate-uuids: false
+    bungeecord:
+        bungee-mode:
+            enable: false
+            kick-message: You must connect through BungeeCord to join this server!
+            info: Only allows connections via BungeeCord to join. Includes optional custom kick message for players not using BungeeCord.
+    cracked-username-prefix:
+        enabled: false
+        info: This setting automatically adds a . prefix to cracked account usernames to prevent username conflicts with premium accounts.
+    check-username-validity:
+        regex: '[a-zA-Z0-9_.]*'
+        max-length: 16
+        enabled: true
+        info: If enabled, verifies the validity of a usernames of cracked players.
+        min-length: 3
+    faster-packets:
+        enabled: true
+        info: This setting increases the speed of packets, a fix from newer Minecraft versions.
+    packet-spam-detection:
+        threshold: 10000
+        enabled: true
+        info: This setting causes the server to detect and kick malicious players who send too many packets in a short period of time. This is useful to prevent players from sending too many packets to the server to cause lag.
+    uuid-fetcher:
+        allow-graceful-uuids:
+            value: true
+            info: This setting means offline UUIDs are generated for players who don't have a Mojang UUID. This is useful for cracked or semi-cracked servers.
+        post:
+            value: https://api.minecraftservices.com/minecraft/profile/lookup/bulk/byname
+            info: This setting allows you to change the URL that the server fetches UUIDs from. This is useful if you have a custom UUID server or a proxy server that fetches UUIDs.
+        method:
+            value: POST
+            info: This setting allows for POST or GET method for fetching UUIDs. This is useful if you have a custom UUID server, Mojang API is down, or a proxy server that fetches UUIDs.
+        get:
+            enforce-case-sensitivity:
+                enabled: true
+                info: The Mojang API is case-insensitive by default meaning usernames with different casing will return the same UUID. This setting checks the case of the username to prevent this issue. If the name is invalid, the player will be kicked.
+            value: https://api.minecraftservices.com/minecraft/profile/lookup/name/{username}
+            info: This setting allows you to change the URL that the server fetches UUIDs from. This is useful if you have a custom UUID server or a proxy server that fetches UUIDs.
+        always-use-graceful-uuids:
+            enabled: false
+            info: Will always use offline UUIDs. Useful if you need the server to run completely offline.
+    support:
+        modloader:
+            enable: false
+            info: EXPERIMENTAL support for ModloaderMP.
+    per-day-log-file:
+        latest-log:
+            enabled: true
+            info: This setting causes the server to create a latest.log similar to modern Minecraft servers. This can be useful for certain control panels and log file management.
+        enabled: false
+        info: This setting causes the server to create a new log file each day. This is useful for log rotation and log file management.
+    remove-join-leave-debug: true
+    performance-monitoring:
+        task-reporting:
+            print-on-slow-tasks:
+                value: 100
+                enabled: true
+                info: Print to console when a task takes longer than the specified time in milliseconds. It isn't recommended to set this any lower then 10ms to prevent console spam.
+            enabled: true
+            print-statistics-on-shutdown:
+                enabled: false
+                info: Prints the task statistics to the console on server shutdown.
+            info: This setting will cause the server to record synchronous task execution times.
+        listener-reporting:
+            print-on-slow-listeners:
+                value: 100
+                enabled: true
+                info: Print to console when a listener takes longer than the specified time in milliseconds. It isn't recommended to set this any lower then 10ms to prevent console spam.
+            enabled: true
+            print-statistics-on-shutdown:
+                enabled: false
+                info: Prints the listener statistics to the console on server shutdown.
+            info: This setting will cause the server to record listener execution times.
+    statistics:
+        key: fb921552-7a53-4d05-a105-9127167b2cab
+        enabled: true
+world:
+    settings:
+        speed-hack-check:
+            distance: 100.0
+            enable: true
+            teleport: true
+            info: This setting allows you to configure the automatic speedhack detection.
+        block-pistons-pushing-furnaces:
+            enabled: true
+            info: This workaround prevents pistons from pushing furnaces which prevents a malicious server crash.
+        flowing-lava-fix:
+            enabled: true
+            info: This setting fixes flowing lava not disappearing when the source block is removed.
+        pistons:
+            transmutation-fix:
+                enabled: true
+                info: This setting fixes block transmutation exploits.
+            other-fixes:
+                enabled: true
+                info: This setting fixes various other piston exploits like creating illegal pistons, breaking bedrock and duplicating redstone torches.
+            sand-gravel-duping-fix:
+                enabled: true
+                info: This setting fixes sand/gravel duplication exploits.
+        block-tree-growth:
+            list: 54,63,68
+            enabled: true
+            info: This setting allows for server owners to easily block trees growing from automatically destroying certain blocks. The list must be a string with numerical item ids separated by commas.
+        skeleton-shooting-sound-fix:
+            enabled: true
+            info: This setting fixes the sound of skeletons and players shooting not playing on clients.
+        mob-spawner-area-limit:
+            enable: true
+            limit: 150
+            chunk-radius: 8
+            info: This setting controls the maximum number of entities of a mob spawner type that can exist within the defined chunk radius around a mob spawner. If the number of entities exceeds this limit, the spawner will stop spawning additional entities of that type. This is useful to stop the extreme lag that can be caused by mob spawners.
+world-settings:
+    optimized-explosions: false
+    send-explosion-velocity: true
+    randomize-spawn: true
+    teleport-to-highest-safe-block: true
+    use-modern-fence-bounding-boxes: false
+fix:
+    optimize-sponges:
+        enabled: true
+        info: Optimizes sponges by removing unnecessary block updates. This can also prevent some block duplication methods.
+config-version: 5
+emergency:
+    debug:
+        regenerate-corrupt-chunks:
+            enable: false
+            info: This setting allows you to automatically regenerate corrupt chunks. This is useful after a ungraceful shutdown while a file is being written to or out of memory exception.
+message:
+    kick:
+        not-whitelisted: You are not white-listed on this server!
+        ip-banned: Your IP address is banned from this server!
+        banned: You are banned from this server!
+        shutdown: §cServer is shutting down, please rejoin later.
+        already-online: §cA player with your username or uuid is already online, try reconnecting in a minute.
+        full: The server is full!
+    update:
+        available: '§dA newer version of Poseidon is available: %newversion%'
+    player:
+        leave: §e%player% left the game.
+        join: §e%player% joined the game.
+command:
+    tps:
+        enabled: true
+        info: Enables the /tps command to show the server's TPS for various intervals.
+    info: This section allows you to enable or disable optional Poseidon commands. This is useful if you have a plugin that conflicts with a Poseidon command.
