@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "reverzee",
+    "uuid": "86cd5b4a-966b-40d2-9ed9-2c2999edc666",
+    "expiresOn": 1779320006,
+    "onlineUUID": true
+  },
+  {
+    "name": "tico58",
+    "uuid": "a6fd8557-d2ab-40c7-ad17-18c87b91f39e",
+    "expiresOn": 1779320040,
+    "onlineUUID": true
+  }
+]
