@@ -10,5 +10,11 @@
     "uuid": "a6fd8557-d2ab-40c7-ad17-18c87b91f39e",
     "expiresOn": 1779320040,
     "onlineUUID": true
+  },
+  {
+    "name": "Miner",
+    "uuid": "4e94f45c-759c-4293-af16-fdf219237a5d",
+    "expiresOn": 1779394301,
+    "onlineUUID": true
   }
 ]

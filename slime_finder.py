@@ -1,10 +1,11 @@
 import ctypes
+import math
 
 # ================= CONFIGURATION =================
 # Replace these with your actual data
 SEED = -7335062620006416349  # Put your seed here
-CURRENT_X = 10              # Your X coordinate
-CURRENT_Z = 100             # Your Z coordinate
+CURRENT_X = math.floor(10.0)              # Your X coordinate
+CURRENT_Z = math.floor(100.0)             # Your Z coordinate
 SEARCH_RADIUS = 5
 # =================================================
 def is_slime_chunk(seed, x, z):
