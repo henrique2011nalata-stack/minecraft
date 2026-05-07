@@ -16,5 +16,11 @@
     "uuid": "4e94f45c-759c-4293-af16-fdf219237a5d",
     "expiresOn": 1779394301,
     "onlineUUID": true
+  },
+  {
+    "name": "joao",
+    "uuid": "dccd96c2-56bc-3dd3-9bae-41a405f25e43",
+    "expiresOn": 1779489098,
+    "onlineUUID": false
   }
 ]
