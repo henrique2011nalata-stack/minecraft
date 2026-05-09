@@ -22,5 +22,23 @@
     "uuid": "dccd96c2-56bc-3dd3-9bae-41a405f25e43",
     "expiresOn": 1779489098,
     "onlineUUID": false
+  },
+  {
+    "name": "Miner3",
+    "uuid": "e1a29bb2-ec6e-4ebb-a495-533fce3348e0",
+    "expiresOn": 1779627776,
+    "onlineUUID": true
+  },
+  {
+    "name": "Miner2",
+    "uuid": "f8a4d686-8808-3ac6-96d1-58aa73d84c3d",
+    "expiresOn": 1779653393,
+    "onlineUUID": false
+  },
+  {
+    "name": "NeadGob",
+    "uuid": "cfae8544-d0c1-4e4d-bab2-16aacd471407",
+    "expiresOn": 1779632714,
+    "onlineUUID": true
   }
 ]
